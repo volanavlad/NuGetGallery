@@ -152,6 +152,11 @@ namespace NuGetGallery
                     app.UseForceSsl(config.Current.SSLPort, config.Current.ForceSslExclusion);
                 }
             }
+            // Get the WindowsAuthenticator auth provider, if present and attach it first
+            if (auth.Authenticators.TryGetValue(Authenticator.GetName(typeof(Authentication.Providers.Windows.WindowsAuthenticator)), out var adAuthenticator))
+            {
+	            adAuthenticator.Startup(config, app).Wait();
+            }
 
             // Get the local user auth provider, if present and attach it first
             Authenticator localUserAuthenticator;

@@ -85,6 +85,11 @@
     <Compile Include="Authentication\Providers\LocalUser\LocalUserAuthenticator.cs" />
     <Compile Include="Authentication\Providers\MicrosoftAccount\MicrosoftAccountAuthenticator.cs" />
     <Compile Include="Authentication\Providers\MicrosoftAccount\MicrosoftAccountAuthenticatorConfiguration.cs" />
+    <Compile Include="Authentication\Providers\Windows\WindowsAuthenticationHandler.cs" />
+    <Compile Include="Authentication\Providers\Windows\WindowsAuthenticationMiddleware.cs" />
+    <Compile Include="Authentication\Providers\Windows\WindowsAuthenticationOptions.cs" />
+    <Compile Include="Authentication\Providers\Windows\WindowsAuthenticator.cs" />
+    <Compile Include="Authentication\Providers\Windows\WindowsAuthHelpers.cs" />
     <Compile Include="Authentication\ScopeViewModel.cs" />
     <Compile Include="Authentication\CredentialBuilder.cs" />
     <Compile Include="Authentication\CredentialValidator.cs" />
